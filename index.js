@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 //Set the base path to the angular-test dist folder
-app.use(express.static(path.join(__dirname, 'Coding4Kids/dist/Coding4Kids')));
+app.use(express.static(path.join(__dirname, 'dist/Coding4Kids')));
 
 //source: https://levelup.gitconnected.com/simple-application-with-angular-6-node-js-express-2873304fff0f
 app.use(function(req, res, next) {
@@ -67,7 +67,7 @@ app.post('/api/createUser', function(req, res) {
 
 //Any routes will be redirected to the angular app
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/GameSite/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/Coding4Kids/index.html'));
 });
 
 //Starting server on port 3030
