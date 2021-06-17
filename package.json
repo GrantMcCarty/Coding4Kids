@@ -1,0 +1,16 @@
+{
+  "name": "coding4kids",
+  "version": "1.0.0",
+  "description": "Server for Angular app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Grant McCarty, Anore Pedalino, Joey Ferrante",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "path": "^0.12.7",
+    "xmlhttprequest": "^1.8.0"
+  }
+}
