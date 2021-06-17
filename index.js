@@ -70,6 +70,7 @@ app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'dist/Coding4Kids/index.html'));
 });
 
+
 //Starting server on port 3030
 app.listen(port, () => {
     console.log('Server started!');
