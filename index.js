@@ -67,7 +67,7 @@ app.post('/api/createUser', function(req, res) {
 
 //Any routes will be redirected to the angular app
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/GameSite/index.html'));
+    res.sendFile(path.join(__dirname, 'Coding4Kids/dist/Coding4Kids/index.html'));
 });
 
 //Starting server on port 3030
