@@ -3033,7 +3033,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\grant\OneDrive\Desktop\Git-Projects\Coding4Kids\Coding4Kids\src\polyfills.ts */"./src/polyfills.ts");
+module.exports = __webpack_require__(/*! C:\Users\grant\OneDrive\Desktop\Git-Projects\Coding4Kids\AngularProject\src\polyfills.ts */"./src/polyfills.ts");
 
 
 /***/ })
