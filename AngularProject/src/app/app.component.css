@@ -3,7 +3,7 @@
     height: 100%;
   }
   mat-drawer-content {
-    background-color: #cf9;
+    background-color: #ff9;
     padding: 12px;
     display: flex;
     flex-direction: column;
