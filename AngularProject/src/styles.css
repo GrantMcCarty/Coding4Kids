@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .65rem;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #cf9;}
+.dashboard {
+    position: absolute;
+    top: 100px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    width: 50%;
+    height: 400px;
+    left: 25%;
+}

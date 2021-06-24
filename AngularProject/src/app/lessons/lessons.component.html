@@ -1,0 +1,35 @@
+<h2 class="header">{{this.lessonHeader}}</h2>
+<div class="lesson">
+    <div class="boxheader">
+        <p style="padding-top: 5px;">{{this.headerText}}</p>
+    </div>
+    <div *ngIf="!endQuiz">
+        <p style="padding: 8px;">{{getLessonText()}}</p>
+        <div class="center" *ngIf="quiz || break">
+            <div class="form-group" [(ngModel)]="currentChoice">
+                <div *ngFor="let choice of choices; let i=index">
+                    <div class="radio">
+                        <input type="radio" id="{{choice}}" name="radio" [value]="choice"
+                            (change)="setChoice($event)" />
+                        <label for="{{choice}}">{{choice}}</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button mat-raised-button color="primary" (click)="checkAnswer(this.currentChoice)" *ngIf="quiz && !answered">Check
+            Answer</button>
+        <button style="position: absolute; left:0; bottom: 0;" mat-raised-button color="accent"
+            *ngIf="hasPrevious() && !quiz" (click)="flipPage(-1)">Back</button>
+        <button style="position: absolute; right:0; bottom: 0;" mat-raised-button color="accent" *ngIf="hasNext()"
+            (click)="flipPage(1)">Next</button>
+        <button style="position: absolute; right:0; bottom: 0;" mat-raised-button color="accent" *ngIf="answered"
+            (click)="nextQuestion()">Next Question!</button>
+    </div>
+    <div *ngIf="endQuiz">
+        You got :
+        {{ correctAnswers }} / {{ totalQuestions }}
+        Questions Correct!
+        <button mat-raised-button color="accent" *ngIf="correctAnswers < totalQuestions" (click)="repeatQuiz()">Repeat Quiz</button>
+        <button mat-raised-button color="accent" *ngIf="correctAnswers >= totalQuestions" (click)="nextLesson()">Next Lesson</button>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="logindiv" *ngIf='!loggedIn'>
+    <div class="boxheader">
+        Sign-in or Register
+    </div>
+    <h3>Log in</h3>
+    <form class="login">
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput type="text" id="username" name="username" [ngModel]="username" (change)="setUsername($event)" required>
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password"
+            [ngModel]="password" (change)="setPassword($event)" required>
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </mat-form-field>
+        <br/>
+        <button type="button" (click)='checkUser()'>Login</button>
+        <button type="button" (click)='createUser()'>Create</button>
+    </form>
+
+</div>

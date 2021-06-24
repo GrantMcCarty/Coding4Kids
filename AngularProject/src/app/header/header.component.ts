@@ -9,7 +9,13 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  username: string;
 
+  ngOnInit(): void {
+    let item = sessionStorage.getItem('currentUser')
+    if(item)
+      this.username = item;
+    else 
+      this.username = "Guest";
+  }
 }

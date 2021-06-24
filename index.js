@@ -45,16 +45,12 @@ app.post('/api/sendToken', function(req, res) {
 
 app.post('/api/login', function(req, res) {
     console.log(JSON.stringify(req.body))
-    addPlayer(req.body.user)  
     res.json({'valid': checkUserFile("userFile.txt", req.body.user, req.body.password)});
 });
 
 app.post('/api/logout', function(req, res) {
     console.log(JSON.stringify(req.body))
     currentUser = null;
-    if(players[0] === req.body.user || players[1] === req.body.user)
-        resetGame();
-    removePlayer(req.body.user);
 });
 
 app.get('/api/get-user', function(req, res) {
@@ -75,8 +71,7 @@ app.get('*', function(req, res) {
 
 //Starting server on port 3030
 app.listen(port, () => {
-    console.log('Server started!');
-    console.log(port);
+    console.log('Server started on ' + port);
 });
 
 function checkUserFile(file, user, password)

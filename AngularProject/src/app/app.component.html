@@ -1,4 +1,13 @@
-<app-header></app-header>
-<main>
-    <router-outlet></router-outlet>
-</main>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer mode="side">
+        <a routerLink="/dashboard">Dashboard</a><br/>
+        <a routerLink="/lessons">Lessons</a>
+    </mat-drawer>
+    <mat-drawer-content>
+        <app-header></app-header>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+        <mat-icon class="toggle" (click)="drawer.toggle()">view_headline</mat-icon>
+    </mat-drawer-content>
+</mat-drawer-container>
