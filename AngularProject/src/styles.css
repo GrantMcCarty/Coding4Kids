@@ -15,4 +15,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
     width: 50%;
     height: 400px;
     left: 25%;
+    font-size: 20px;
+    background-color: #FFF;
 }

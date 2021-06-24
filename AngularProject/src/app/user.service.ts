@@ -16,8 +16,8 @@ export class UserService implements CanActivate {
     username: string;
     loggedIn: boolean = false;
   
-    url = "http://localhost:3030/api/";
-    // url = "https://coding-4-kids-qariq.ondigitalocean.app/api/";
+    // url = "http://localhost:3030/api/";
+    url = "https://coding-4-kids-qariq.ondigitalocean.app/api/";
 
     canActivate(): boolean {
         if(sessionStorage.getItem('currentUser')) {   
