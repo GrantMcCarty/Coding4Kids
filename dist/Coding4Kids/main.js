@@ -1057,9 +1057,9 @@ class UserService {
         this.http = http;
         this.route = route;
         this.loggedIn = false;
-        this.url = "http://localhost:3030/api/";
+        // url = "http://localhost:3030/api/";
+        this.url = "https://coding-4-kids-qariq.ondigitalocean.app/api/";
     }
-    // url = "https://coding-4-kids-qariq.ondigitalocean.app/api/";
     canActivate() {
         if (sessionStorage.getItem('currentUser')) {
             return true;
