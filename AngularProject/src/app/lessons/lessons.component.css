@@ -22,3 +22,9 @@
 .radio-button {
     display: block;
 }
+.button-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    margin-bottom: 0px;
+}

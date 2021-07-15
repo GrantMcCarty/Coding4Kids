@@ -16,20 +16,47 @@
                 </div>
             </div>
         </div>
-        <button mat-raised-button color="primary" (click)="checkAnswer(this.currentChoice)" *ngIf="quiz && !answered">Check
-            Answer</button>
-        <button style="position: absolute; left:0; bottom: 0;" mat-raised-button color="accent"
-            *ngIf="hasPrevious() && !quiz" (click)="flipPage(-1)">Back</button>
-        <button style="position: absolute; right:0; bottom: 0;" mat-raised-button color="accent" *ngIf="hasNext()"
+
+        <div *ngIf="showInput">
+            <form style="display:flex; justify-content: center; align-content: center;">
+                <mat-form-field style="width:300px; padding:10px;">
+                    <mat-label>Answer Here:</mat-label>
+                    <input matInput type="text" id="input" name="input" [ngModel]="input"
+                        (change)="setInput($event)">
+                </mat-form-field>
+            </form>
+            <div class="center">
+                <button mat-raised-button color="primary" (click)="checkInput()">Check Answer!</button>
+            </div>
+        </div>
+
+        <div id="codeSection">
+            <div id="lesson1" hidden data-pym-src="https://www.jdoodle.com/embed/v0/3rgy?stdin=0&arg=0&rw=0"></div>
+            <div hidden></div>
+            <div id="lesson3" hidden data-pym-src="https://www.jdoodle.com/embed/v0/3rUH?stdin=0&arg=0&rw=1"></div>
+        </div>
+
+        <button style="position: relative; float: left;" mat-raised-button color="accent" *ngIf="hasPrevious() && !quiz"
+            (click)="flipPage(-1)">Back</button>
+        <button style="position: relative; float: right;" mat-raised-button color="accent" *ngIf="hasNext() && !showInput"
             (click)="flipPage(1)">Next</button>
-        <button style="position: absolute; right:0; bottom: 0;" mat-raised-button color="accent" *ngIf="answered"
-            (click)="nextQuestion()">Next Question!</button>
+
+        <div class="center">
+            <button mat-raised-button color="primary" (click)="checkAnswer(this.currentChoice)"
+                *ngIf="quiz && !answered">Check Answer</button>
+            <button mat-raised-button color="accent" *ngIf="answered" (click)="nextQuestion()">Next
+                Question!</button>
+        </div>
     </div>
     <div *ngIf="endQuiz">
-        You got :
-        {{ correctAnswers }} / {{ totalQuestions }}
-        Questions Correct!
-        <button mat-raised-button color="accent" *ngIf="correctAnswers < totalQuestions" (click)="repeatQuiz()">Repeat Quiz</button>
-        <button mat-raised-button color="accent" *ngIf="correctAnswers >= totalQuestions" (click)="nextLesson()">Next Lesson</button>
+        <h3 class="center">You got :
+            {{ correctAnswers }} / {{ totalQuestions }}
+            Questions Correct!</h3>
+        <div class="center">
+            <button mat-raised-button color="accent" (click)="repeatQuiz()">Repeat Quiz</button>
+            <button mat-raised-button color="accent" *ngIf="correctAnswers >= totalQuestions"
+                (click)="nextLesson()">Next
+                Lesson</button>
+        </div>
     </div>
 </div>

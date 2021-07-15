@@ -3,12 +3,11 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { LessonsComponent } from './lessons.component';
+import { UserStatsComponent } from './user-stats.component';
 
-describe('LessonsComponent', () => {
-  let component: LessonsComponent;
-  let fixture: ComponentFixture<LessonsComponent>;
-
+describe('UserStatsComponent', () => {
+  let component: UserStatsComponent;
+  let fixture: ComponentFixture<UserStatsComponent>;
   let fakeHttpClient = {
     post() {
       return new Observable<any>();
@@ -18,7 +17,7 @@ describe('LessonsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LessonsComponent ],
+      declarations: [ UserStatsComponent ],
       providers: [{provide:HttpClient, useValue: fakeHttpClient},
         {provide:Router, useValue:fakeRouter}]
     })
@@ -26,7 +25,7 @@ describe('LessonsComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LessonsComponent);
+    fixture = TestBed.createComponent(UserStatsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

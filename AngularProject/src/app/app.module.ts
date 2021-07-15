@@ -14,6 +14,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { LessonsComponent } from './lessons/lessons.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { UserStatsComponent } from './user-stats/user-stats.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     DashboardComponent,
     HeaderComponent,
     LoginComponent,
-    LessonsComponent
+    LessonsComponent,
+    UserStatsComponent
   ],
   imports: [
     BrowserModule,

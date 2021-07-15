@@ -4,7 +4,7 @@
     "lessonText":[
         "Hi! Welcome to Coding4Kids! Are you excited to start your coding adventure? Before we begin let’s answer the question: What is coding? To answer this question, we have to explore how computers work. On tablets, computers, and phones we can play games, watch shows and movies, do homework, and even message or call friends and family! But how do computers allow us to do all of those things. The answer is because of computer programs and apps. But how do we create computer programs? We can create computer programs through code!", 
         "break", 
-        "Coding is a way for us to communicate with computers! Just as we may use a variety of languages to communicate with each other English, Spanish, French, Japanese, Chinese, etc. \nCode is a language that a computer understands, and we write code to instruct a computer to perform a specific function. \nFor example! If we wanted to tell the computer to print out “Hello World” this is what it would look like:",
+        "Coding is a way for us to communicate with computers! Just as we may use a variety of languages to communicate with each other English, Spanish, French, Japanese, Chinese, etc. \nCode is a language that a computer understands, and we write code to instruct a computer to perform a specific function. \nFor example! If we wanted to tell the computer to print out “Hello World!” this is what it would look like:",
         "Coding also allows us to develop and create websites, games, and apps! There are many different coding languages that we can use to communicate with a computer. Some examples of these coding languages are Python, Java, JavaScript, C, C++ and more! We are going to learn Java! Although these lessons will be focused on teaching you how to code in Java, many Java coding concepts are also used in other coding languages!",
         "How did you feel about the lesson today? Next, take this quiz to see how much of this lesson you understood!",
         "quiz"
@@ -16,5 +16,7 @@
                    ["a. Python", "b. C++", "c. Java", "d. JavaScript"],
                    ["a. Puzzle", "b. Computer program and app", "c. Way to call and message friends"]
                   ],
-    "answers":["b","c","b"]
+    "answers":["b","c","b"],
+    "showCode": 2,
+    "codeUrl":["https://www.jdoodle.com/embed/v0/3rgy?stdin=0&arg=0&rw=0"]
 }

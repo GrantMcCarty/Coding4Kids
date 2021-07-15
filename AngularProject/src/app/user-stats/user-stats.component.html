@@ -1,0 +1,13 @@
+<p>user-stats works!</p>
+<div style="position: relative; top: 15%">
+    <h2>Time Spent</h2>
+    <ul>
+        <!-- TODO Convert time to  hours : minutes : seconds -->
+        <li *ngFor="let time of getTimeSpent(); let idx = index;">Lesson{{idx+1}}: {{time}} seconds</li>
+    </ul>
+    <h2>Quiz Scores</h2>
+    <ul>
+        <!-- TODO Convert time to  hours : minutes : seconds -->
+        <li *ngFor="let scores of getQuizScores(); let idx = index;">Lesson{{idx+1}}: {{scoresAsText(scores)}}</li>
+    </ul>
+</div>

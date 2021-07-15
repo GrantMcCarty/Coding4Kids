@@ -35,6 +35,8 @@ export class LoginComponent implements OnInit {
       this.loggedIn = data.valid;
       if(data.valid) 
         this.storeUser(this.username);
+      else
+        alert("Login failed, check username and password")
     });
   }
 
@@ -49,15 +51,14 @@ export class LoginComponent implements OnInit {
     this.password = null;
   }
 
-  createUser(): boolean {
+  createUser() {
     //cant create username as Guest/Admin or a duplicate username
     this.userService.createCall(this.username, this.password).subscribe(data => {
       this.loggedIn = data.valid;
       if(data.valid) this.storeUser(this.username)
+      else alert("User already exists!\n Try logging in or creating an account with a different name.")
       return data.valid;
     });
-    return false;
-    //ng if failed send error banner?
   }
 
   setUsername($event) {
