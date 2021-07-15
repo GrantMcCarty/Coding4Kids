@@ -15,7 +15,6 @@ export class DashboardComponent implements OnInit {
   }
 
   nextLesson() {
-    console.log("next lesson")
     this.router.navigate(['/lessons']);
   }
 

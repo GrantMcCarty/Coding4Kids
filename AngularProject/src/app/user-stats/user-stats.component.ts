@@ -15,7 +15,6 @@ export class UserStatsComponent implements OnInit {
   ngOnInit(): void {
     this.userService.userCall(sessionStorage.getItem('currentUser')).subscribe(data => {
       this.userStats = data.stats;
-      console.log(this.userStats);  
     });
   }
 

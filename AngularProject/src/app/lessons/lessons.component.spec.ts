@@ -34,4 +34,16 @@ describe('LessonsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should not complete lesson if score is not 80% or above', () => {
+    component.totalQuestions = 5;
+    component.correctAnswers = 3;
+    expect(component.completedLesson()).toBe(false)
+  })
+
+  it('should complete lesson if score is 80% or above', () => {
+    component.totalQuestions = 5;
+    component.correctAnswers = 4;
+    expect(component.completedLesson()).toBe(true)
+  })
 });

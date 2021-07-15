@@ -80,7 +80,7 @@ export class LessonsComponent implements OnInit, OnDestroy {
 
   loadScript() {
     this.script.load('filepicker').then(data => {
-      console.log('script loaded ', data);
+      console.log('script loaded');
     }).catch(error => console.log(error));
   }
 

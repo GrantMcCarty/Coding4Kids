@@ -28,4 +28,19 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should set username', () => {
+    component.setUsername({target:{value:'user'}});
+    expect(component.username).toEqual('user');
+  });
+
+  it('should set password', () => {
+    component.setPassword({target:{value:'pw'}});
+    expect(component.password).toEqual('pw');
+  });
+
+  it('should not login if no user is present', () => {
+    component.checkSession();
+    expect(component.loggedIn).toBe(undefined);
+  })
 });

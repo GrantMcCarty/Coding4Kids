@@ -33,4 +33,18 @@ describe('UserStatsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return timeSpent', () => {
+    component.userStats = { timeSpent:[10] }
+    expect(component.getTimeSpent()).toEqual([10]);
+  })
+
+  it('should return quizScores', () => {
+    component.userStats = { quizScores:[100] }
+    expect(component.getQuizScores()).toEqual([100]);
+  })
+
+  it('should return quizScores as text', () => {
+    expect(component.scoresAsText([100, 50, 60])).toEqual("100, 50, 60");
+  })
 });
