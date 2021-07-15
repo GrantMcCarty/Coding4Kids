@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { UserStatsComponent } from './user-stats.component';
+import { UserStatsComponent } from '../app/user-stats/user-stats.component';
 
 describe('UserStatsComponent', () => {
   let component: UserStatsComponent;

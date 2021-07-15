@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { LessonsComponent } from './lessons.component';
+import { LessonsComponent } from '../app/lessons/lessons.component';
 
 describe('LessonsComponent', () => {
   let component: LessonsComponent;

@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ScriptService } from './script.service';
+import { ScriptService } from '../app/script.service';
 
 describe('ScriptService', () => {
   let service: ScriptService;
