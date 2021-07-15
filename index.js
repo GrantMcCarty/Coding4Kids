@@ -115,12 +115,10 @@ function updateOrCreateStatsfile(req) {
             let obj = statsObjects[x];
             if (obj && req.name == obj.name) { //find the stats object by username but could be id
                 let lessonNum = req.lesson - 1;
-                if(obj.lessonsCompleted <= lessonNum) {
+                if(req.completed && obj.lessonsCompleted <= lessonNum) {
                     obj.lessonsCompleted++;
                 }
-                console.log(obj.timeSpent)
                 obj.timeSpent[lessonNum] += req.timeSpent;
-                console.log(obj.timeSpent)
                 if (req.quizScore) {
                     obj.quizScores[lessonNum].push(req.quizScore*100);
                 }

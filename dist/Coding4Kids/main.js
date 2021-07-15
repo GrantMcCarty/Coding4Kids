@@ -526,7 +526,7 @@ function LessonsComponent_div_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtextInterpolate2"]("You got : ", ctx_r1.correctAnswers, " / ", ctx_r1.totalQuestions, " Questions Correct!");
     _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r1.correctAnswers >= ctx_r1.totalQuestions);
+    _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("ngIf", ctx_r1.completedLesson());
 } }
 class LessonsComponent {
     constructor(httpClient, script, userService) {
@@ -648,11 +648,13 @@ class LessonsComponent {
         window.location.reload();
     }
     updateStats() {
+        let score = this.correctAnswers / this.totalQuestions;
         this.userService.updateStats({
             name: this.userStats.name,
             lesson: this.currentLesson,
             timeSpent: this.time,
-            quizScore: this.correctAnswers / this.totalQuestions,
+            quizScore: score,
+            completed: score >= 0.8
         });
         this.pauseTimer();
         this.startTimer();
@@ -675,6 +677,9 @@ class LessonsComponent {
         else {
             alert("Incorrect! :(");
         }
+    }
+    completedLesson() {
+        return (this.correctAnswers / this.totalQuestions) >= 0.8;
     }
 }
 LessonsComponent.ɵfac = function LessonsComponent_Factory(t) { return new (t || LessonsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_1__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_script_service__WEBPACK_IMPORTED_MODULE_2__["ScriptService"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_user_service__WEBPACK_IMPORTED_MODULE_3__["UserService"])); };

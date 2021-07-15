@@ -157,11 +157,13 @@ export class LessonsComponent implements OnInit, OnDestroy {
   }
 
   updateStats() {
+    let score = this.correctAnswers / this.totalQuestions
     this.userService.updateStats({
       name: this.userStats.name,
       lesson: this.currentLesson,
       timeSpent: this.time,
-      quizScore: this.correctAnswers / this.totalQuestions,
+      quizScore: score,
+      completed: score >= 0.8
     });
     this.pauseTimer();
     this.startTimer();
@@ -186,5 +188,9 @@ export class LessonsComponent implements OnInit, OnDestroy {
     } else {
       alert("Incorrect! :(");
     }
+  }
+
+  completedLesson() {
+    return (this.correctAnswers / this.totalQuestions) >= 0.8
   }
 }

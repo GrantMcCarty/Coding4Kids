@@ -54,7 +54,7 @@
             Questions Correct!</h3>
         <div class="center">
             <button mat-raised-button color="accent" (click)="repeatQuiz()">Repeat Quiz</button>
-            <button mat-raised-button color="accent" *ngIf="correctAnswers >= totalQuestions"
+            <button mat-raised-button color="accent" *ngIf="completedLesson()"
                 (click)="nextLesson()">Next
                 Lesson</button>
         </div>
