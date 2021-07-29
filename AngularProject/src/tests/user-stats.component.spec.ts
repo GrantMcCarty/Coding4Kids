@@ -41,7 +41,7 @@ describe('UserStatsComponent', () => {
 
   it('should return quizScores', () => {
     component.userStats = { quizScores:[100] }
-    expect(component.getQuizScores()).toEqual([100]);
+    expect(component.getQuizScores(1)).toEqual([100]);
   })
 
   it('should return quizScores as text', () => {

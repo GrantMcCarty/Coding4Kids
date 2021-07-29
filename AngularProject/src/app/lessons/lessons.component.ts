@@ -13,8 +13,6 @@ export class LessonsComponent implements OnInit, OnDestroy {
   constructor(private httpClient: HttpClient, private script: ScriptService, private userService: UserService) { }
 
   lesson;
-  lessonHeader;
-  headerText;
   currentLesson;
   currentPage;
   quiz;
@@ -26,13 +24,8 @@ export class LessonsComponent implements OnInit, OnDestroy {
   totalQuestions;
   answered;
   endQuiz;
-  showCode;
   showInput;
-  correctInput;
-  userStats;
   input;
-  inputPages;
-
   time: number = 0;
   interval;
 
@@ -49,7 +42,6 @@ export class LessonsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loadScript();
     this.userService.userCall(sessionStorage.getItem('currentUser')).subscribe(data => {
-      this.userStats = data.stats;
       this.currentLesson = data.stats.lessonsCompleted + 1; //TODO implement going back or forward, pass the lesson num not on init
       this.httpClient.get('assets/lessons/lesson' + this.currentLesson + '.json', { responseType: 'json' })
         .subscribe(data => this.getLessonInfo(data));
@@ -69,13 +61,8 @@ export class LessonsComponent implements OnInit, OnDestroy {
       alert("Error getting lesson " + this.currentLesson);
       return;
     }
-    this.lesson = data; //TODO remove other fields and just get info from object in methods
-    this.lessonHeader = this.lesson.header;
-    this.headerText = this.lesson.headerText;
+    this.lesson = data;
     this.totalQuestions = this.lesson?.quiz?.length || 0;
-    this.showCode = this.lesson?.showCode || -1;
-    this.inputPages = this.lesson?.inputPages || [];
-    this.correctInput = this.lesson?.correctInput || [];
   }
 
   loadScript() {
@@ -119,12 +106,13 @@ export class LessonsComponent implements OnInit, OnDestroy {
     if (pageNum >= pageSize) return;
     this.currentPage += number;
     this.getLessonText();
-    if (this.currentPage == this.showCode) {
+    let showCode = this.lesson?.showCode || -1
+    if (this.currentPage == showCode) {
       document.getElementById("codeSection").children[this.currentLesson - 1].removeAttribute("hidden")
-    } else if (this.showCode != -1) {
+    } else if (showCode != -1) {
       document.getElementById("codeSection").children[this.currentLesson - 1].setAttribute("hidden", "");
-    } else if (this.inputPages) {
-      this.showInput = this.inputPages.includes(this.currentPage);
+    } else if (this.lesson.inputPages) {
+      this.showInput = this.lesson.inputPages.includes(this.currentPage);
     }
   }
 
@@ -159,7 +147,7 @@ export class LessonsComponent implements OnInit, OnDestroy {
   updateStats() {
     let score = this.correctAnswers / this.totalQuestions
     this.userService.updateStats({
-      name: this.userStats.name,
+      name: sessionStorage.getItem('currentUser'),
       lesson: this.currentLesson,
       timeSpent: this.time,
       quizScore: score,
@@ -182,15 +170,26 @@ export class LessonsComponent implements OnInit, OnDestroy {
   }
 
   checkInput() {
-    if (this.correctInput.includes(this.input)) {
-      this.showInput = false;
-      alert("Correct! :D");
-    } else {
-      alert("Incorrect! :(");
-    }
+    let correct: string[] = this.lesson.correctInput;
+    let found = false;
+    correct.forEach(str => {
+      if (str == this.input) {
+        this.showInput = false;
+        found = true;
+        return;
+      }
+    })
+    found ? alert("Correct! :D") : alert("Incorrect! :(");
   }
 
   completedLesson() {
     return (this.correctAnswers / this.totalQuestions) >= 0.8
+  }
+
+  getLessonHeader() {
+    return this.lesson ? this.lesson.header :  "";
+  }
+  getLessonHeaderText() {
+    return this.lesson ? this.lesson.headerText :  "";
   }
 }

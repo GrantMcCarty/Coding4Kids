@@ -11,6 +11,7 @@ export class UserStatsComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   userStats;
+  favoriteActivity;
 
   ngOnInit(): void {
     this.userService.userCall(sessionStorage.getItem('currentUser')).subscribe(data => {
@@ -19,11 +20,30 @@ export class UserStatsComponent implements OnInit {
   }
 
   getTimeSpent() {
-    return this.userStats?.timeSpent || [];
+    let arr = [];
+    let largest = 0;
+    let index = 0, favLesson = 0;
+    this.userStats?.timeSpent.forEach(element => {
+      let num = Number(element);
+      if(num > largest) {
+        largest = num;
+        favLesson = index;
+      }
+      let minutes = Math.floor(num / 60);
+      let seconds = num % 60
+      let str = minutes != 0 
+      ? minutes + " minutes, " + seconds + " seconds" 
+      : seconds + " seconds"
+      arr.push(str);
+      index++;
+    });
+    this.getFavoriteActivity(favLesson+1);
+    return arr;
   }
 
-  getQuizScores() {
-    return this.userStats?.quizScores || [];
+  getQuizScores(idx) {
+    let scores = this.userStats?.quizScores[idx];
+    return scores && scores.length > 0 ? scores : ["N/A"];
   }
 
   scoresAsText(scores) {
@@ -34,6 +54,20 @@ export class UserStatsComponent implements OnInit {
         string += ", "
     }
     return string == "" ? "No Attempts":string;
+  }
+
+  getFavoriteActivity(favLesson) {
+    switch(favLesson) {
+      case 1 : this.favoriteActivity = "What is coding?"; break;
+      case 2 : this.favoriteActivity = "What are variables?"; break;
+      case 3 : this.favoriteActivity = "Hello World!"; break;
+      case 4 : this.favoriteActivity = "If/Else Statements"; break;
+      case 5 : this.favoriteActivity = "TODO ADD LESSON NAME"; break;
+    }
+  }
+
+  showFavoriteActivity() {
+    return this.favoriteActivity ? this.favoriteActivity : "";
   }
 
 }

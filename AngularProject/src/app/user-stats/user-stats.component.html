@@ -1,11 +1,28 @@
-<div style="position: relative; top: 15%">
-    <h2>Time Spent</h2>
-    <ul>
-        <!-- TODO Convert time to  hours : minutes : seconds -->
-        <li *ngFor="let time of getTimeSpent(); let idx = index;">Lesson{{idx+1}}: {{time}} seconds</li>
-    </ul>
-    <h2>Quiz Scores</h2>
-    <ul>
-        <li *ngFor="let scores of getQuizScores(); let idx = index;">Lesson{{idx+1}}: {{scoresAsText(scores)}}</li>
-    </ul>
+<div class="stats">
+    <h1 style="margin-left:-2%">Progress</h1>
+    <table>
+        <tr>
+            <th class="header">Lesson</th>
+            <th class="header">Time Spent</th>
+            <th class="header">Quiz Scores</th>
+        </tr>
+        <tr *ngFor="let time of getTimeSpent(); let idx = index;">
+            <th style="width: 60px" class="data">{{idx+1}}</th> 
+            <th class="data">
+                <img style="float: left; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">
+                {{time}}
+                <img style="float: right; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">
+            </th>
+            <th class="data">
+                <img style="float: left; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">
+                {{getQuizScores(idx)}}
+                <img style="float: right; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">
+            </th>
+        </tr>
+    </table>
+    <br/><br/>
+    <div class="favActivity">
+        <h1>Favorite Activity</h1><br/>
+        <span>{{showFavoriteActivity()}}</span>
+    </div>
 </div>

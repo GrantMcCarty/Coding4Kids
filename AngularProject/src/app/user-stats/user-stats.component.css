@@ -1,0 +1,29 @@
+.stats{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    top: 80px;
+    width: 100%;
+}
+table{
+    border:2px solid #000;
+    background-color: #86592d;
+    width: 90%;
+    padding: 0;
+    font-size: 30px;
+}
+.data {
+    border:2px solid #000;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.favActivity {
+    background-color: chartreuse;
+    border: 5px dotted #ad7339;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 50%;
+}

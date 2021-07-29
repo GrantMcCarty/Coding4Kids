@@ -2,18 +2,24 @@
     "header":"Lesson 3 Coding4Kids",
     "headerText":"Hello World!",
     "lessonText":[
-        "Here is what a Java Hello World Program looks like: public class Main { public static void main(String[] args) { System.out.println(\"Hello World!\");}}",
-        "This program above would print out “Hello, World” to the screen. But, how do we write our own Hello World, where should we start? You may have noticed that the first line of the program begins with public class Main {",
-        "This first line is necessary because it defines a Java class called main. In Java, each line of code that is run has to be inside of a class. The main class is declared as public, which means that other Java classes can access it. You will learn more about this much later on, but for now, we need to know that we have to begin our program with: public class Main{",
-        "The next line is public static void main(String[] args){ This line is called the main method and this line is also necessary to run the program. Let’s break this line down to get a better understanding of why it is necessary.",
-        "What it means: Public (similar to before it means that anyone can access it), Static means that an instance of Main doesn’t need to be created when running this method and is a type of variable. Void means that this method does not return a value (you will understand this more in the next lessons).   main is the name of the method",
-        "System.out.println(“Hello, World!”) is called an argument. An argument is what will do or happen inside the method when the program is run. Arguments are contained inside of the method. Method (public static void main(String[] args)) Argument (System.out.println(“Hello, World!”))",
-        "Method -> Argument. Arguments are held within methods. System.out.println(“Hello, World!”) is what actually produce the Hello, World! Response that we are looking for.", 
-        "System.out.println(“This text will be printed”); is used to print a line. Whatever text is contained within (“…….”); this section of the call is what will be printed out.",
-        "Let’s practice: What if we wanted to print out “Hello Friends!” What would that look like?",
-        "We know that we first need to define a java class called main: public class Main{ } Then inside of this, we will put our main method: public class Main{ public static void main(String[] args){}} Inside of our static method we will put our argument where we will print “Hello Friends” this will look like this: System.out.println(“Hello Friends!”);",
-        "So, all together the program will look like this: public class Main{ public static void main(String[] args) {System.out.println(“Hello Friends!”); } }",
-        "Now you try! In this activity you will write your very first Java program and print out “Hello Coding4Kids!”"
+        "Here is what a Java Hello World Program looks like: \n\npublic class Main { \npublic static void main(String[] args) { \nSystem.out.println(\"Hello World!\");\n}\n}",
+        "This program above would print out \"Hello, World\" to the screen. \n\nBut, how do we write our own Hello World, where should we start? \n\nYou may have noticed that the first line of the program begins with \n\npublic class Main {",
+        "This first line is necessary because it defines a Java class called main. \n\nIn Java, each line of code that is run has to be inside of a class. \n\nThe main class is declared as public, which means that other Java classes can access it. \n\nYou will learn more about this much later on, but for now, we need to know that we have to begin our program with: \n\npublic class Main{",
+        "The next line is \n\npublic static void main(String[] args){ \n\nThis line is called the main method and this line is also necessary to run the program. \n\nLet’s break this line down to get a better understanding of why it is necessary.",
+        "What it means: \nPublic (similar to before it means that anyone can access it), \n\nStatic means that an instance of Main doesn’t need to be created when running this method and is a type of variable. \n\nVoid means that this method does not return a value (you will understand this more in the next lessons).   \n\nmain is the name of the method",
+        "System.out.println(“Hello, World!”) is called an argument. \n\nAn argument is what will do or happen inside the method when the program is run. \nArguments are contained inside of the method. \n\nMethod (public static void main(String[] args)) \n\nArgument (System.out.println(“Hello, World!”))",
+        "Method -> Argument. \n\nArguments are held within methods. \n\nSystem.out.println(“Hello, World!”) is what actually produce the Hello, World! Response that we are looking for.", 
+        "System.out.println(“This text will be printed”); is used to print a line. \n\nWhatever text is contained within (“…….”); this section of the call is what will be printed out.",
+        "Let’s practice: \n\nWhat if we wanted to print out “Hello Friends!” \n\nWhat would that look like?",
+        "We know that we first need to define a java class called main: \n\npublic class Main {\n\n} \n\nThen inside of this, we will put our main method: \n\npublic class Main { \npublic static void main(String[] args){}\n} \n\nInside of our static method we will put our argument where we will print “Hello Friends” this will look like this: \n\nSystem.out.println(“Hello Friends!”);",
+        "So, all together the program will look like this: public class Main{ \npublic static void main(String[] args) {\nSystem.out.println(“Hello Friends!”); \n} \n}",
+        "Now you try! \n\nIn this activity you will write your very first Java program and print out “Hello Coding4Kids!”",
+        "quiz"
     ],
+    "quiz":["What did your program print?"],
+    "quizChoices":[
+        ["a. Hello Coding4Kids!"]
+    ],
+    "answers":["a"],
     "showCode":[11]
 }
