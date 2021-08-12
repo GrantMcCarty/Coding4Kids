@@ -3,8 +3,16 @@
     <div class="boxheader">
         <div style="padding-top: 6px;">{{getLessonHeaderText()}}</div>
     </div>
+    <div class="lessonChoices" *ngIf="!this.lesson">
+        <h2>Lessons</h2>
+        <span style="padding:10px" *ngFor="let item of [].constructor(this.currentLesson); let i = index">
+            <button mat-raised-button color="accent" (click)="getLesson(i+1)">Lesson {{i+1}}</button>
+        </span>
+    </div>
     <div *ngIf="!endQuiz">
-        <small style="display:block; padding: 8px; font-family:Georgia, 'Times New Roman', Times, serif; font-size:25px;" [innerText]="getLessonText()"></small>
+        <small
+            style="display:block; padding: 8px; font-family:Georgia, 'Times New Roman', Times, serif; font-size:25px;"
+            [innerText]="getLessonText()"></small>
         <div class="center" *ngIf="quiz || break">
             <div class="form-group" [(ngModel)]="currentChoice">
                 <div *ngFor="let choice of choices; let i=index">

@@ -134,6 +134,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#favoriteActivity" >favoriteActivity</a>
+                            </li>
+                            <li>
                                 <a href="#userStats" >userStats</a>
                             </li>
                         </ul>
@@ -149,6 +152,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#getFavoriteActivity" >getFavoriteActivity</a>
+                            </li>
+                            <li>
                                 <a href="#getQuizScores" >getQuizScores</a>
                             </li>
                             <li>
@@ -159,6 +165,9 @@
                             </li>
                             <li>
                                 <a href="#scoresAsText" >scoresAsText</a>
+                            </li>
+                            <li>
+                                <a href="#showFavoriteActivity" >showFavoriteActivity</a>
                             </li>
                         </ul>
                     </td>
@@ -234,6 +243,70 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getFavoriteActivity"></a>
+                    <span class="name">
+                        <span ><b>getFavoriteActivity</b></span>
+                        <a href="#getFavoriteActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getFavoriteActivity(favLesson)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="59"
+                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:59</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>favLesson</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getQuizScores"></a>
                     <span class="name">
                         <span ><b>getQuizScores</b></span>
@@ -243,15 +316,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>getQuizScores()</code>
+<code>getQuizScores(idx)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="44"
+                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:44</a></div>
                 </td>
             </tr>
 
@@ -260,8 +333,35 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>idx</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
+                    </div>
+                    <div class="io-description">
+                        
                     </div>
                 </td>
             </tr>
@@ -287,8 +387,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="21"
-                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:21</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:22</a></div>
                 </td>
             </tr>
 
@@ -297,7 +397,7 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>{}</code>
 
                     </div>
                 </td>
@@ -324,8 +424,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="15"
-                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:15</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:16</a></div>
                 </td>
             </tr>
 
@@ -361,8 +461,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="29"
-                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:29</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:49</a></div>
                 </td>
             </tr>
 
@@ -405,12 +505,69 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="showFavoriteActivity"></a>
+                    <span class="name">
+                        <span ><b>showFavoriteActivity</b></span>
+                        <a href="#showFavoriteActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>showFavoriteActivity()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/user-stats/user-stats.component.ts:69</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
     <section>
     
     <h3 id="inputs">
         Properties
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="favoriteActivity"></a>
+                    <span class="name">
+                        <span ><b>favoriteActivity</b></span>
+                        <a href="#favoriteActivity"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/user-stats/user-stats.component.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -450,6 +607,7 @@ export class UserStatsComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   userStats;
+  favoriteActivity;
 
   ngOnInit(): void {
     this.userService.userCall(sessionStorage.getItem(&#x27;currentUser&#x27;)).subscribe(data &#x3D;&gt; {
@@ -458,11 +616,30 @@ export class UserStatsComponent implements OnInit {
   }
 
   getTimeSpent() {
-    return this.userStats?.timeSpent || [];
+    let arr &#x3D; [];
+    let largest &#x3D; 0;
+    let index &#x3D; 0, favLesson &#x3D; 0;
+    this.userStats?.timeSpent.forEach(element &#x3D;&gt; {
+      let num &#x3D; Number(element);
+      if(num &gt; largest) {
+        largest &#x3D; num;
+        favLesson &#x3D; index;
+      }
+      let minutes &#x3D; Math.floor(num / 60);
+      let seconds &#x3D; num % 60
+      let str &#x3D; minutes !&#x3D; 0 
+      ? minutes + &quot; minutes, &quot; + seconds + &quot; seconds&quot; 
+      : seconds + &quot; seconds&quot;
+      arr.push(str);
+      index++;
+    });
+    this.getFavoriteActivity(favLesson+1);
+    return arr;
   }
 
-  getQuizScores() {
-    return this.userStats?.quizScores || [];
+  getQuizScores(idx) {
+    let scores &#x3D; this.userStats?.quizScores[idx];
+    return scores &amp;&amp; scores.length &gt; 0 ? scores : [&quot;N/A&quot;];
   }
 
   scoresAsText(scores) {
@@ -475,21 +652,52 @@ export class UserStatsComponent implements OnInit {
     return string &#x3D;&#x3D; &quot;&quot; ? &quot;No Attempts&quot;:string;
   }
 
+  getFavoriteActivity(favLesson) {
+    switch(favLesson) {
+      case 1 : this.favoriteActivity &#x3D; &quot;What is coding?&quot;; break;
+      case 2 : this.favoriteActivity &#x3D; &quot;What are variables?&quot;; break;
+      case 3 : this.favoriteActivity &#x3D; &quot;Hello World!&quot;; break;
+      case 4 : this.favoriteActivity &#x3D; &quot;If/Else Statements&quot;; break;
+      case 5 : this.favoriteActivity &#x3D; &quot;TODO ADD LESSON NAME&quot;; break;
+    }
+  }
+
+  showFavoriteActivity() {
+    return this.favoriteActivity ? this.favoriteActivity : &quot;&quot;;
+  }
+
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div style&#x3D;&quot;position: relative; top: 15%&quot;&gt;
-    &lt;h2&gt;Time Spent&lt;/h2&gt;
-    &lt;ul&gt;
-        &lt;!-- TODO Convert time to  hours : minutes : seconds --&gt;
-        &lt;li *ngFor&#x3D;&quot;let time of getTimeSpent(); let idx &#x3D; index;&quot;&gt;Lesson{{idx+1}}: {{time}} seconds&lt;/li&gt;
-    &lt;/ul&gt;
-    &lt;h2&gt;Quiz Scores&lt;/h2&gt;
-    &lt;ul&gt;
-        &lt;li *ngFor&#x3D;&quot;let scores of getQuizScores(); let idx &#x3D; index;&quot;&gt;Lesson{{idx+1}}: {{scoresAsText(scores)}}&lt;/li&gt;
-    &lt;/ul&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;stats&quot;&gt;
+    &lt;h1 style&#x3D;&quot;margin-left:-2%&quot;&gt;Progress&lt;/h1&gt;
+    &lt;table&gt;
+        &lt;tr&gt;
+            &lt;th class&#x3D;&quot;header&quot;&gt;Lesson&lt;/th&gt;
+            &lt;th class&#x3D;&quot;header&quot;&gt;Time Spent&lt;/th&gt;
+            &lt;th class&#x3D;&quot;header&quot;&gt;Quiz Scores&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr *ngFor&#x3D;&quot;let time of getTimeSpent(); let idx &#x3D; index;&quot;&gt;
+            &lt;th style&#x3D;&quot;width: 60px&quot; class&#x3D;&quot;data&quot;&gt;{{idx+1}}&lt;/th&gt; 
+            &lt;th class&#x3D;&quot;data&quot;&gt;
+                &lt;img style&#x3D;&quot;float: left; width:50px; height:40px&quot; src&#x3D;&quot;../assets/images/pixil-frame-5.png&quot;&gt;
+                {{time}}
+                &lt;img style&#x3D;&quot;float: right; width:50px; height:40px&quot; src&#x3D;&quot;../assets/images/pixil-frame-5.png&quot;&gt;
+            &lt;/th&gt;
+            &lt;th class&#x3D;&quot;data&quot;&gt;
+                &lt;img style&#x3D;&quot;float: left; width:50px; height:40px&quot; src&#x3D;&quot;../assets/images/pixil-frame-5.png&quot;&gt;
+                {{getQuizScores(idx)}}
+                &lt;img style&#x3D;&quot;float: right; width:50px; height:40px&quot; src&#x3D;&quot;../assets/images/pixil-frame-5.png&quot;&gt;
+            &lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;br/&gt;&lt;br/&gt;
+    &lt;div class&#x3D;&quot;favActivity&quot;&gt;
+        &lt;h1&gt;Favorite Activity&lt;/h1&gt;&lt;br/&gt;
+        &lt;span&gt;{{showFavoriteActivity()}}&lt;/span&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -498,7 +706,35 @@ export class UserStatsComponent implements OnInit {
                 <p class="comment">
                     <code>./user-stats.component.css</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">.stats{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    top: 80px;
+    width: 100%;
+}
+table{
+    border:2px solid #000;
+    background-color: #86592d;
+    width: 90%;
+    padding: 0;
+    font-size: 30px;
+}
+.data {
+    border:2px solid #000;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+.favActivity {
+    background-color: chartreuse;
+    border: 5px dotted #ad7339;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    height: 150px;
+    width: 50%;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -526,7 +762,7 @@ export class UserStatsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div style="position: relative; top: 15%">    <h2>Time Spent</h2>    <ul>        <!-- TODO Convert time to  hours : minutes : seconds -->        <li *ngFor="let time of getTimeSpent(); let idx = index;">Lesson{{idx+1}}: {{time}} seconds</li>    </ul>    <h2>Quiz Scores</h2>    <ul>        <li *ngFor="let scores of getQuizScores(); let idx = index;">Lesson{{idx+1}}: {{scoresAsText(scores)}}</li>    </ul></div></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="stats">    <h1 style="margin-left:-2%">Progress</h1>    <table>        <tr>            <th class="header">Lesson</th>            <th class="header">Time Spent</th>            <th class="header">Quiz Scores</th>        </tr>        <tr *ngFor="let time of getTimeSpent(); let idx = index;">            <th style="width: 60px" class="data">{{idx+1}}</th>             <th class="data">                <img style="float: left; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">                {{time}}                <img style="float: right; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">            </th>            <th class="data">                <img style="float: left; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">                {{getQuizScores(idx)}}                <img style="float: right; width:50px; height:40px" src="../assets/images/pixil-frame-5.png">            </th>        </tr>    </table>    <br/><br/>    <div class="favActivity">        <h1>Favorite Activity</h1><br/>        <span>{{showFavoriteActivity()}}</span>    </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'DashboardComponent', 'selector': 'app-dashboard'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'LessonsComponent', 'selector': 'app-lessons'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'UserStatsComponent', 'selector': 'app-user-stats'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'UserStatsComponent'};

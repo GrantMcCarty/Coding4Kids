@@ -1,0 +1,24 @@
+{
+    "header": "Lesson 5 Coding4Kids",
+    "headerText": "Loops",
+    "lessonText": [
+        "We’ve just learned how to write If and Else statements.\n Now we’ll begin to discuss things called While loops and Do-while loops.\n\n Building off what we have learned from If/Else conditional statements,\n what if we wanted to check if there were GREEN cards in a deck of cards.\n\n If the card was green, we would STOP checking the deck, but if the card was not green we would put the non-green card into another pile.\n\n We need to continue to check UNTIL we reach a green card. \nThat means we need some way to loop through the deck of cards until we reach a green card.\n\n So far, we have not learned a way to loop through objects.\n",
+        "Introducing the while loop! \n\nThe while loop is a conditional loop that allows for a certain repetitive action to occur until the condition is met,\n or there is a break; statement that completely stops the loop.\n",
+        "Let’s show how a while loop would function.\n\n Let’s say you have a bag of candy, and you want to continue to eat the candy until the bag is empty. \n\nThis might look like: while(bag has candy) continue to eat candy!;\n\n Now this would work so that you would eat candy while the bag has candy and you would break out of this loop when the bag no longer has candy because it no longer satisfies the while condition.\n",
+        "While loops tend to be in this format:\n\nwhile (condition){\n//code that tells what happens while condition is met\n}\n\nThere is also a do-while loop. This works really similarly to a while loop, here is what it looks like:\n\ndo{\nEat candy!;\n}while(candy bag has candy)\n",
+        "So, that is while and do-while loops. For loops are also conditional loops and are some of the most commonly used loops!\n\nWith a for loop, you need to state what the beginning condition is, how the condition will increment or decrement, and the end condition.\n\nFor example if we start out with 10 candies in the bag, and we eat a candy one at a time, and we want to continue to loop until there are 0 candies in the bag, using a for loop it may look like this:\n\nfor(int i = 10; i > 0; i--){\neat candy;\n}\n",
+        "For a for() loop, you may notice that there are 3 conditions within the parenthesis.\n\nA for loop requires you to recognize what the starting condition is, what condition is required for the loop to end, and how will the loop increment or decrement.\n\nThe for() loop structure is as follows:\n\nfor(initiate a variable that will be the starting condition; what condition is necessary for the loop to continue; how will we increment or decrement our loop as we pass through it){\n//condition that will happen as we loop;\n}\n",
+        "Using our candy example, our initial condition is that we are starting with 10 candies.\n\nfor(int i = 10;……..)\n\nWe want to loop until there are 0 candies left in the bag….so we want to loop until candies = 0. So, we need to tell our program that we want to loop while candies > 0….because once i = 0 we no longer need to loop because that means we have 0 candies left to eat!\n\nLet’s see what this will look like:\n\nfor(int i = 10; i > 0;…..)\n\nFor our third and final condition, we must decide how we should increment or decrement our for() loop. If we are starting with 10 candies, and we want to eat the candy until we have 0 candies, do we need to increase or decrease the amount of candy we have as we loop?\n\nWe need to decrease our candy! Because we will continue to have – 1 candy in the bag as we keep eating!\n\nfor(int i = 10; i > 0; i--){\n//What will happen as we loop? Write that in between the brackets of the function!\neatCandy;\n}\n",
+        "Now that you have learned how to write while, do-while, and for loops lets practice!\n",
+        "quiz"
+    ],
+    "quiz":["How many parts make up a for loop?\n\n Hint: for(…..;…..;….)\n","What are the three parts of a for loop in correct order?\n", "In the do while loop, the while condition is at the…\n", "When would you break out of a while loop that has the conditions: while(x > 0)\n", "When would you choose to use a for loop instead of a while or do-while loop?\n"],
+    "quizChoices":[
+        ["a. 2", "b. 3","c. 4","d. 1"],
+        ["a. Initialize, test, increment","b. Test, increment, initialize","c. Increment, test, initialize"],
+        ["a. Beginning", "b. Middle","c. End"],
+        ["a. When x is 7", "b. When x is 1", "c. When x is 0"],
+        ["a. When you just need to increment your condition.","b. When you need to initialize, test, and increment your condition.","c. When you just need to test your condition"]
+    ],
+    "answers":["b", "a", "c", "c", "b"]
+}

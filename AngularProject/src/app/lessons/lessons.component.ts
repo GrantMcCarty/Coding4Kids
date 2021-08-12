@@ -42,14 +42,10 @@ export class LessonsComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     this.loadScript();
     this.userService.userCall(sessionStorage.getItem('currentUser')).subscribe(data => {
-      this.currentLesson = data.stats.lessonsCompleted + 1; //TODO implement going back or forward, pass the lesson num not on init
-      this.httpClient.get('assets/lessons/lesson' + this.currentLesson + '.json', { responseType: 'json' })
-        .subscribe(data => this.getLessonInfo(data));
+      this.currentLesson = data.stats.lessonsCompleted + 1;
     });
-
     this.currentPage = this.currentBreak = this.correctAnswers = this.time = 0;
     this.quiz = this.break = this.answered = this.endQuiz = false;
-    this.startTimer();
   }
 
   ngOnDestroy() {
@@ -89,6 +85,7 @@ export class LessonsComponent implements OnInit, OnDestroy {
         return this.lesson.quiz[this.currentBreak];
       }
     }
+    else return "";
   }
 
   hasNext() {
@@ -145,6 +142,8 @@ export class LessonsComponent implements OnInit, OnDestroy {
   }
 
   updateStats() {
+    if(this.currentLesson == 7)
+      return;
     let score = this.correctAnswers / this.totalQuestions
     this.userService.updateStats({
       name: sessionStorage.getItem('currentUser'),
@@ -154,7 +153,6 @@ export class LessonsComponent implements OnInit, OnDestroy {
       completed: score >= 0.8
     });
     this.pauseTimer();
-    this.startTimer();
   }
 
   repeatQuiz() {
@@ -191,5 +189,11 @@ export class LessonsComponent implements OnInit, OnDestroy {
   }
   getLessonHeaderText() {
     return this.lesson ? this.lesson.headerText :  "";
+  }
+  getLesson(lessonNum) {
+    this.httpClient.get('assets/lessons/lesson' + lessonNum + '.json', { responseType: 'json' })
+        .subscribe(data => this.getLessonInfo(data));
+    this.currentLesson = lessonNum;
+    this.startTimer();
   }
 }

@@ -1,0 +1,23 @@
+{
+    "header": "Lesson 6 Coding4Kids",
+    "headerText": "Arrays[]",
+    "lessonText": [
+        "We know that variables allow us to store information for a single item. For example, if we wanted to store a variable to show the amount of grocery items we need, we might use an integer variable to show that number.\n\nExample:\n\nint items = 3;\n\nThis shows us that we need 3 items from the grocery store, but it doesn’t allow us to see what each item we need is. Arrays can help us with this problem!\n\n",
+        "In Java, arrays are collections of data that allow us to store many of the same type of variable in one “space”.\n\nHere is some important vocabulary for this lesson:\n1. Array\n2. Element\n3. Index\n",
+        "The formal definition of an array is that it is “an object which contains elements of a similar data type”.\n\nArrays allow us to store elements of all data types or variables. But each array can only store elements of the same datatype.\nThese elements are stored in the “cells” of the array.",
+        "To show how arrays work let’s say we want to store the word: “Hello” in an array, with each letter occupying one cell in an array.\n\nIf we were to store the word “Hello” we would probably want to use a string variable, which would look like:\n\nString hello = “Hello”;\n\nStoring hello as characters in an array would look like:\n\nchar[] helloArray = {‘H’, ‘e’, ‘l’, ‘l’, ‘o’};\n\nor \n\nchar[] helloArray = new char[5];\n\nhelloArray[0] = ‘H’;\nhelloArray[1] = ‘e’;\nhelloArray[2] = ‘l’;\nhelloArray[3] = ‘l’;\nhelloArray[4] = ‘0’;\nThe index of an array is the location of its cell and is shown in that example: helloArray[0] = ‘H’. The index of ‘H’ is 0. The index of the first element of an array always starts at 0. That’s why an array could contain 5 cells or elements, but have index 4 (helloArray[4] = ‘o’;) as its last index position.\n\n",
+        "Here are some ways that you can create an array:\n\nTo declare an int array: int [] array;\nTo declare an int array with 10 elements: int [] array = new int[10];\nTo set index 3 in an int array to 4: array[3] = 4;\nTo get the number at int array index 2 and store it in integer variable “x”: int x = array[2];\n",
+        "Before we answer questions about what we have learned…. How would be address our original problem of storing the names of the items we need from the grocery store.\n\nTo store names we know we will need to create an array of the string datatype. We also know we need 3 items from the grocery store.\n\nLet’s declare a string array that can store 3 elements!\n\nString[] items = new String[3];\n\nNow, lets set the elements we need to be names of the groceries we want to buy at each index.\nRemember our arrays always start at index 0, this is where the first element in our array will be stored. \n\n1. At index 0, we want to store “Milk”\n2. At index 1, we want to store “Cookies”\n3. At index 2, we want to store “Apples”\nWhat would this look like:\n\nitems[0] = “Milk”;\nitems[1] = “Cookies”;\nitems[2] = “Apples”\nThe last element (“Apples”) will be stored at index 2 because our array only has 3 elements. The last index of an array will always be array size-1.\n",
+        "Let’s answer some questions!\n",
+        "quiz"
+    ],
+    "quiz":["int[] array = new int[4];\n\nWhat is the size of this array?\n", "int[] array = new int[4];\n\nWhat datatype is this array?\n","String array = new String[4];\n\nWhat is the last index of this array?\n","array[0] = “Fruit”;\narray[1] = “Veggies”;\narray[2] = “Juice”;\n\nWhat element is stored at index 1 of this array?\n", "array[0] = “Fruit”;\narray[1] = “Veggies”;\narray[2] = “Juice”;\n\nWhat index is “Juice” stored at in this array?\n"],
+    "quizChoices":[
+        ["a. 3","b. 4","c. 5","d. 6"],
+        ["a. String","b. char","c. int","d. double"],
+        ["a. 3", "b. 2", "c. 4"],
+        ["a. Fruit", "b. Juice","c. Milk","d. Veggies"],
+        ["a. 0","b. 1","c. 2","d. 3"]
+    ],
+    "answers":["b","c","a","d","c"]
+}

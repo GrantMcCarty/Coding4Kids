@@ -36,12 +36,12 @@ describe('UserStatsComponent', () => {
 
   it('should return timeSpent', () => {
     component.userStats = { timeSpent:[10] }
-    expect(component.getTimeSpent()).toEqual([10]);
+    expect(component.getTimeSpent()).toEqual(["10 seconds"]);
   })
 
   it('should return quizScores', () => {
-    component.userStats = { quizScores:[100] }
-    expect(component.getQuizScores(1)).toEqual([100]);
+    component.userStats = { quizScores:[[100]] }
+    expect(component.getQuizScores(0)).toEqual([100]);
   })
 
   it('should return quizScores as text', () => {

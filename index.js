@@ -172,8 +172,8 @@ function createUserStats(statsFile, user) {
         "id": length + 1,
         "name": user,
         "lessonsCompleted": 0,
-        "quizScores": [[], [], [], [], []], //5 lessons for now
-        "timeSpent": [0,0,0,0,0], //5 lessons for now
+        "quizScores": [[], [], [], [], [], []], //6 lessons for now
+        "timeSpent": [0,0,0,0,0,0], //6 lessons for now
         "favoriteActivity": "none"
     }
 
