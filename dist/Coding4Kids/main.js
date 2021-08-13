@@ -1077,7 +1077,10 @@ class UserStatsComponent {
                 this.favoriteActivity = "If/Else Statements";
                 break;
             case 5:
-                this.favoriteActivity = "TODO ADD LESSON NAME";
+                this.favoriteActivity = "Loops";
+                break;
+            case 6:
+                this.favoriteActivity = "Arrays[]";
                 break;
         }
     }

@@ -62,7 +62,8 @@ export class UserStatsComponent implements OnInit {
       case 2 : this.favoriteActivity = "What are variables?"; break;
       case 3 : this.favoriteActivity = "Hello World!"; break;
       case 4 : this.favoriteActivity = "If/Else Statements"; break;
-      case 5 : this.favoriteActivity = "TODO ADD LESSON NAME"; break;
+      case 5 : this.favoriteActivity = "Loops"; break;
+      case 6 : this.favoriteActivity = "Arrays[]"; break;
     }
   }
 
